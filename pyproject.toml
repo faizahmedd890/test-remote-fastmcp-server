@@ -1,0 +1,10 @@
+[project]
+name = "expense-tracker-mcp"
+version = "0.1.0"
+description = "Expense Tracker MCP Server"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "fastmcp==3.4.7",
+    "aiosqlite>=0.20.0",
+]
