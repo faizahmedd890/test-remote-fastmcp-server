@@ -4,10 +4,11 @@ import aiosqlite
 import sqlite3
 import json
 
-# Store the database in the same folder as this Python file
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Database must be stored in a writable directory in the deployed container
+DB_PATH = "/tmp/expenses.db"
 
-DB_PATH = os.path.join(BASE_DIR, "expenses.db")
+# categories.json is bundled with the application
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CATEGORIES_PATH = os.path.join(BASE_DIR, "categories.json")
 
 print(f"Database path: {DB_PATH}")
